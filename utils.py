@@ -83,7 +83,7 @@ def normalize2d(p):
     std = np.std(p,axis=1)
     T = np.array([[1/std[0],0,-mean[0]/std[0]],
                   [0,1/std[1],-mean[1]/std[1]],
-                 [0,0,1]])
+                  [0,0,1]])
     return Pi(T@PiInv(p)), T
 
 ########################
@@ -91,8 +91,8 @@ def normalize2d(p):
 ########################
 
 # q: shape(2 rows, n cols), n = num of points
-# q is the same point viewed from different viewpoints
-# P: 3x4 proj mtx
+# q is the same point viewed from different viewpoints in image coords
+# P: list of 3x4 proj mtces of length n
 # ret: 4x1 homogenious 3D triangulated point
 def triangulate(q, P):
     B = []
