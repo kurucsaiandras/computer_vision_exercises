@@ -1,5 +1,10 @@
 import numpy as np
 import cv2
+import math
+import matplotlib.pyplot as plt
+
+def np_pretty_print(prec):
+    np.set_printoptions(suppress=True, precision=prec)
 
 ########################
 # FUNCTIONS FROM EX_1  #
